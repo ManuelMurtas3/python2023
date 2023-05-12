@@ -3,9 +3,9 @@
 dizionario = dict()
 stringa = input("Inserire una stringa: ")
 
-for parola in stringa.split(' '): #eseguo un'iterazione su ogni lettera della stringa dell'utente
-    if parola not in dizionario.keys(): #se è la prima volta che incontriamo la lettera
+for parola in stringa.split(' '): #eseguo un'iterazione su ogni parola della stringa dell'utente
+    if parola not in dizionario.keys(): #se è la prima volta che incontriamo la parola
         dizionario[parola] = 1 #ci salviamo una nuova chiave
     else:
-        dizionario[parola] += 1 #abbiamo incontrato la lettera un'altra volta
+        dizionario[parola] += 1 #abbiamo incontrato la parola un'altra volta
 print(dizionario)
