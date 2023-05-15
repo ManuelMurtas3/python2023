@@ -25,7 +25,7 @@ while not exit_flag:
         prezzo = float(input("Inserisci il prezzo del piatto da inserire: € "))
         
         if prezzo < 0:
-            print("\nErrore, il prezzo non può essere negativo.")
+            print("\nErrore, il prezzo non può essere negativo")
         else:
             # registro il piatto nel menu come nome: prezzo
             menu[nome_piatto] = prezzo
@@ -53,7 +53,7 @@ while not exit_flag:
         if nome_piatto not in menu.keys():
             print("Errore, il piatto da te inserito non è presente nel menù")
         elif quantita < 0:
-            print("\nErrore, la quantità non può essere negativa.")
+            print("\nErrore, la quantità non può essere negativa")
         else:
             if nome_piatto in ordine.keys():
                 #aggiungo una nuova quantità di piatto all'ordinazione
