@@ -121,9 +121,9 @@ def switch_menu(utente):
             if utente.ordinabile(menu[indice_piatto]):
                 ordinazione.ordina_piatto(menu[indice_piatto])
                 utente.ordina_piatto(menu[indice_piatto])
-                print(f"\nIl budget corrente è di € {utente.budget}\n")
+                print(f"Il budget corrente è di € {utente.budget}\n")
             else:
-                print("\nIl tuo budget non è sufficiente per l'ordinazione del piatto")
+                print("Il tuo budget non è sufficiente per l'ordinazione del piatto")
                 print(f"Il budget corrente è di € {utente.budget}\n")
             
 
