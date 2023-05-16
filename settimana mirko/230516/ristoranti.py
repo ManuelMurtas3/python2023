@@ -20,6 +20,7 @@ class Piatto:
         self.prezzo = prezzo
     
     def to_string(self):
+        #stringa da utilizzare per stampare il nome
         return f"Piatto: {self.nome} | Prezzo: € {self.prezzo}"
 
 #classe per la memorizzazione delle ordinazioni
