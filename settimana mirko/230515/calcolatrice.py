@@ -15,13 +15,13 @@ class Calcolatrice:
 
     def somma(self, primo_numero, secondo_numero): # somma
         return primo_numero + secondo_numero
-    
+
     def sottrai(self, primo_numero, secondo_numero): # sottrazione
         return primo_numero - secondo_numero
-    
+
     def moltiplica(self, primo_numero, secondo_numero): # moltiplicazione
         return primo_numero * secondo_numero
-    
+
     # metodo per il calcolo del risultato della somma di tutti i risultati parziali calcolati per l'iterazione corrente
     def totale(self):
         if self.operazioni == []:
@@ -32,8 +32,7 @@ class Calcolatrice:
                 if risultato[0] == self.numero_iterazioni:
                     somma_totale += risultato[1]
             return somma_totale
-            
-    
+
     # metodo per stampare i risultati parziali con l'operatore di riferimento e l'iterazione di riferimento
     def stampa_operazioni(self):
         if self.operazioni == []:
@@ -42,7 +41,7 @@ class Calcolatrice:
             for numero_iterazione, risultato, operatore in self.operazioni:
                 print(f"Iterazione: {numero_iterazione} | Risultato: {risultato} | Operazione: {operatore}")
         return
-    
+
     # metodo per la memorizzazione del ciclo iterativo corrente
     def inizia_iterazione(self):
         self.numero_iterazioni += 1
@@ -96,10 +95,10 @@ while not exit_flag:
             
             print()
         
-        print(f"\nSomma totale: {calcolatrice.totale()}") #restituisco la somma totale delle operazioni
+        print(f"\nSomma totale: {calcolatrice.totale()}") # restituisco la somma totale delle operazioni
 
     elif scelta == '2':
-        calcolatrice.stampa_operazioni() #stampo i risultati parziali
+        calcolatrice.stampa_operazioni() # stampo i risultati parziali
 
     elif scelta == '3':
         # cancello tutte le operazioni se l'utente dà conferma con 'y'
@@ -109,7 +108,7 @@ while not exit_flag:
             print("\nOperazioni cancellate con successo")
         elif pulisci != 'n':
             print("Errore, l'opzione da te selezionata non esiste")
-        #se l'utenze seleziona 'n' non fa niente e torna al menù
+        # se l'utenze seleziona 'n' non fa niente e torna al menù
 
     else:
         print("Errore, l'opzione da te selezionata non esiste")
