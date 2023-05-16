@@ -4,7 +4,6 @@
 # SE CHIEDIAMO IL CONTO, CI DEVE CHIEDERE NOME E COGNOME E POI STAMPARE IL TOTALE E PIATTI A SCHERMO POI RITORNIAMO AL MENU INIZIALE
 # OGGETTO CON QUALI PIATTI, QUANTO HO SPESO, CHI HA SPESO
 # Vai a far si che si possa eliminare e aggiungere alla lista un piatto (parte 2)
-# Vai a far si che l'utente possa creare il suo profilo prima di poter ordinare (parte 3)
 
 #classe per la memorizzazione dei piatti del menu
 class Piatto:
