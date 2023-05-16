@@ -13,13 +13,13 @@ class Calcolatrice:
         self.operazioni.append((self.numero_iterazioni, risultato, operatore))
         return
 
-    def somma(self, primo_numero, secondo_numero): # somma
+    def somma(primo_numero, secondo_numero): # somma
         return primo_numero + secondo_numero
 
-    def sottrai(self, primo_numero, secondo_numero): # sottrazione
+    def sottrai(primo_numero, secondo_numero): # sottrazione
         return primo_numero - secondo_numero
 
-    def moltiplica(self, primo_numero, secondo_numero): # moltiplicazione
+    def moltiplica(primo_numero, secondo_numero): # moltiplicazione
         return primo_numero * secondo_numero
 
     # metodo per il calcolo del risultato della somma di tutti i risultati parziali calcolati per l'iterazione corrente
