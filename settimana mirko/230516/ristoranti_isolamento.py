@@ -9,6 +9,9 @@
 #OBIETTIVO: provare ad identificare parti del codice che vengono spesso ripetute che si possono isolare in una funziona
 #Per questo codice non credo ci siano particolari ripetizioni di codice che possono essere isolati.
 #Ho deciso di isolare il print del budget corrente (che ripeto tre volte) siccome ha senso sia un metodo dell'utente stesso
+#Potrei, volendo, isolare l'inserimento di nome e prezzo di un piatto (sia nel caso di modifica che di creazione) ma credo sia
+#meglio non isolarlo in quanto sarebbe un metodo univocamente legato al tipo di programma che stiamo creando e violerebbe (?)
+#un po' il concetto di astrazione della classe che dovrebbe essere indipendente al contesto command line in cui si trova.
 
 #classe per la memorizzazione dei piatti del menu
 class Piatto:
