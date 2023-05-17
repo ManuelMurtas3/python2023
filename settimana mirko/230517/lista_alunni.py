@@ -3,7 +3,6 @@
 # L'esercizio sarà creare un sistema che permetta di andare a scegliere un singolo utente e di modificare e aggiungere i suoi voti 
 
 class Alunno:
-
     def __init__(self, nome):
         self.nome = nome
 
@@ -11,13 +10,13 @@ class Alunno:
         return f"Alunno: {self.nome}"
 
 class SchedaAlunno(Alunno):
-
     def __init__(self, nome, voto):
         super().__init__(nome)
         self.voti = list()
         self.voti.append(voto)
 
     def modifica_voto(self, indice, voto):
+        #modifico il voto in base al nuovo voto fornito e all'indice nella lista del voto che si vuole modificare
         if 0 <= indice < len(self.voti):
             self.voti[indice] = voto
 
@@ -28,7 +27,6 @@ class SchedaAlunno(Alunno):
         return super().to_string() + f" | Voti: {' '.join([str(voto) for voto in self.voti])}"
     
 class ListaAlunni:
-
     lista_schede_alunni = []
 
     def __init__(self, nomi, voti):
@@ -88,7 +86,7 @@ def switch_registro(lista_alunni):
             #gestisci voti alunno
             nome = input("Inserisci il nome dell'alunno di cui gestire i voti: ")
             print()
-            alunno = lista_alunni.cerca_alunno(nome)
+            alunno = lista_alunni.cerca_alunno(nome) #ottengo l'alunno cercato
             switch_alunno(alunno)
 
         elif option == "0":
@@ -110,7 +108,7 @@ def switch_alunno(alunno):
 
         if option == "1":
             #modifica voto
-            indice = switch_voto(alunno)
+            indice = switch_voto(alunno) #ottengo il voto cercato
             nuovo_voto = int(input("Inserisci il nuovo voto: "))
             alunno.modifica_voto(indice, nuovo_voto)
             print("Voto modificato correttamente\n")
@@ -129,9 +127,12 @@ def switch_alunno(alunno):
             continue
 
 def switch_voto(alunno):
+    #switch che ritorna l'indice del voto selezionato come "da modificare"
     exit_flag = False
     while not exit_flag:
         print("Seleziona il voto da modificare: ")
+
+        #visualizzo una lista di voti indicizzati da numero_opzione
         numero_opzione = 1
         for voto in alunno.voti:
             print(f"{numero_opzione}. {voto}")
@@ -140,7 +141,7 @@ def switch_voto(alunno):
         option = int(input("Inserisci il numero del dell'indice del voto: "))
         print()
 
-        #selezione del piatto in base all'indice nel menu
+        #selezione del voto in base all'indice nell'elenco dei voti
         if option >= 1 and option <= len(alunno.voti):
             return option - 1
         else:
